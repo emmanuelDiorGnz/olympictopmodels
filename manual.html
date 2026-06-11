@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Estilo | Olympic Top Models</title>
+    <link rel="stylesheet" href="ccsolympic.css">
+    <style>
+        .manual-section {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.00) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: border 0.4s ease;
+        }
+
+        .manual-section:hover {
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .manual-section h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+        }
+
+        .perfume-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .perfume-card {
+            background-color: rgba(2, 4, 10, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .perfume-card:hover {
+            border-color: #d4af37;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1);
+        }
+
+        .perfume-card h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .perfume-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            background-color: #02040a;
+            transition: transform 0.5s ease;
+        }
+
+        .perfume-card:hover .perfume-img {
+            transform: scale(1.05);
+        }
+
+        .manual-img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: opacity 0.3s;
+        }
+        
+        .manual-img:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body class="inner-page">
+
+    <header>
+        <div class="nav-container">
+            <a href="home.html" class="logo">OLYMPIC <span class="text-gold">TOP MODELS</span></a>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="models.html">Modelos IA</a>
+                <a href="manual.html" class="active">Manual de Estilo</a>
+                <a href="formulario.html">Sé un Olympic</a>
+                <a href="news.html">Novedades</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">Manual de <span class="text-gold">Esencia y Estilo</span></h2>
+        
+        <div class="manual-section">
+            <h3 class="text-gold" style="margin-bottom: 20px;">1. Fundamentos Diarios</h3>
+            <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px; font-weight: 300;">
+                <strong style="color: #fff; font-weight: 600;">Higiene Impecable:</strong> La base de todo atractivo. El cuidado personal comienza con una ducha y limpieza facial dos veces al día para mantener una piel limpia y fresca.
+            </p>
+            <p style="color: rgba(255,255,255,0.7); font-weight: 300;">
+                <strong style="color: #fff; font-weight: 600;">Disciplina Física:</strong> Mantener el cuerpo activo con un mínimo de 40 minutos de deporte diario. No solo optimiza la postura y la percha, sino que reinicia la energía mental.
+            </p>
+        </div>
+
+        <div class="manual-section">
+            <h3 class="text-gold">2. Identidad Olfativa</h3>
+            <p style="color: rgba(255,255,255,0.5); font-size: 0.95rem; font-weight: 300; margin-top: 5px;">El olor es la memoria que dejas en los demás. Elige tu sector ideal:</p>
+            
+            <div class="perfume-grid">
+                <div class="perfume-card">
+                    <img src="https://perfumeriasgotta.com/77699-large_default/giorgio-armani-acqua-di-gio-parfum.jpg" alt="Perfume Fresco" class="perfume-img">
+                    <h4 class="text-gold" style="margin-bottom: 10px;">Cítricos / Frescos</h4>
+                    <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); font-weight: 300;">Huelen a limpio, mar y frutas cítricas. Ideales para el día a día, el verano o después de entrenar.<br><br><span style="color: #fff;">Recomendamos:</span> Acqua Di Giò</p>
+                </div>
+                <div class="perfume-card">
+                    <img src="https://i1.perfumesclub.com/grande/204329-2.jpg" alt="Perfume Amaderado" class="perfume-img">
+                    <h4 class="text-gold" style="margin-bottom: 10px;">Amaderados</h4>
+                    <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); font-weight: 300;">Notas de madera, cedro y sándalo. Transmiten elegancia, madurez y presencia robusta en eventos o climas fríos.<br><br><span style="color: #fff;">Recomendamos:</span> Terre d'Hermès</p>
+                </div>
+                <div class="perfume-card">
+                    <img src="https://photos6.spartoo.es/photos/280/28014364/28014364_1200_A.jpg" alt="Perfume Oriental" class="perfume-img">
+                    <h4 class="text-gold" style="margin-bottom: 10px;">Especiados</h4>
+                    <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); font-weight: 300;">Notas cálidas como vainilla, pimienta o canela. Intensos, magnéticos y perfectos para destacar en la noche.<br><br><span style="color: #fff;">Recomendamos:</span> One Million</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="manual-section">
+            <h3 class="text-gold" style="margin-bottom: 20px;">3. Imagen Personalizada</h3>
+            <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px; font-weight: 300;">
+                <strong style="color: #fff; font-weight: 600;">El Cabello Correcto:</strong> Un buen corte define la estructura del rostro. Encuentra junto a tu estilista la geometría que potencie tus facciones, no las modas pasajeras.
+            </p>
+            <p style="color: rgba(255,255,255,0.7); font-weight: 300;">
+                <strong style="color: #fff; font-weight: 600;">Vestimenta con Propósito:</strong> La ropa debe hablar de ti. Escoge prendas que encajen de verdad con tu estilo de vida y tu personalidad, priorizando siempre que te queden a la medida justa (*el fit*).
+            </p>
+            <img src="https://img.magnific.com/foto-gratis/diseno-collage-personas_23-2148888278.jpg?semt=ais_hybrid&w=740&q=80" alt="Collage Estilo" class="manual-img">
+        </div>
+
+        <div class="manual-section" style="border-color: rgba(212, 175, 55, 0.4); background: linear-gradient(145deg, rgba(212,175,55,0.02) 0%, transparent 100%);">
+            <h3 class="text-gold" style="margin-bottom: 20px;">4. El Imán Real: La Actitud</h3>
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.05rem; line-height: 1.8; font-weight: 300; letter-spacing: 0.5px;">
+                El físico atrae el ojo, pero la personalidad domina el espacio. Desarrollar una <strong style="color: #fff; font-weight: 600;">autoestima sólida</strong> combinada con el <strong style="color: #fff; font-weight: 600;">respeto absoluto hacia los demás</strong> crea una presencia imbatible. Ser suelto, espontáneo y auténtico te quita rigidez y te convierte instantáneamente en una persona agradable, magnética y real en cualquier entorno.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; font-size: 0.8rem;">
+            <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Política de privacidad</a>
+            <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Política de cookies</a>
+            <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Política de eliminación de contenido</a>
+            <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Términos y condiciones</a>
+            <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Declaración de accesibilidad de SI</a>
+            <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Gestionar preferencias</a>
+        </div>
+        <p>&copy; 2026 OLYMPIC TOP MODELS. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

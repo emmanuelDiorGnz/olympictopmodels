@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sé un Olympic | Postulación</title>
+    <link rel="stylesheet" href="ccsolympic.css">
+</head>
+<body class="inner-page">
+
+    <header>
+        <div class="nav-container">
+            <a href="home.html" class="logo">OLYMPIC <span class="text-gold">TOP MODELS</span></a>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="models.html">Modelos IA</a>
+                <a href="manual.html">Manual de Estilo</a>
+                <a href="formulario.html" class="active">Sé un Olympic</a>
+                <a href="news.html">Novedades</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section-olympic">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 20px;">
+                Sé un <span class="text-gold">Olympic</span>
+            </h2>
+
+            <p style="text-align: center; color: rgba(255,255,255,0.6); margin-bottom: 40px; font-size: 0.95rem; font-weight: 300; letter-spacing: 0.5px;">
+                ¿Consideras que cumples con nuestro estricto estándar estético? Envía tu perfil.<br>
+                Nuestro comité compuesto por expertos evaluará de forma manual cada postulación.
+            </p>
+
+            <form onsubmit="event.preventDefault(); alert('Postulación enviada con éxito. El comité revisará tus fotos.');">
+
+                <div class="form-group">
+                    <label for="name">Nombre Completo</label>
+                    <input type="text" id="name" placeholder="Ej. Carlos Silva" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo">Fotografía</label>
+                    <input type="file" id="photo" accept="image/*" required style="padding: 10px; border: 1px dashed rgba(212,175,55,0.3);">
+                </div>
+
+                <div class="form-group">
+                    <label for="instagram">Usuario de Instagram / Portafolio</label>
+                    <input type="text" id="instagram" placeholder="@tu_usuario" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="motivation">¿Por qué crees que encajas en el estándar Olympic?</label>
+                    <textarea id="motivation" rows="4" placeholder="Describe tus rasgos más fuertes o tu estilo único..."></textarea>
+                </div>
+
+                <div style="text-align: center; margin-top: 40px;">
+                    <button type="submit" class="btn-gold">Enviar al Comité</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; font-size: 0.8rem;">
+            <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Política de privacidad</a>
+            <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Política de cookies</a>
+            <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Política de eliminación de contenido</a>
+            <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Términos y condiciones</a>
+            <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Declaración de accesibilidad de SI</a>
+            <a href="#" style="color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Gestionar preferencias</a>
+        </div>
+        <p>&copy; 2026 OLYMPIC TOP MODELS. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

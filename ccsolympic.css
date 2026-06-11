@@ -1,0 +1,325 @@
+/* --- GOOGLE FONTS: ALTA COSTURA Y ELEGANCIA --- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+
+/* --- ESTILOS GENERALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at 50% 50%, #0d1630 0%, #02040a 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Animación de fondo en movimiento sutil solo para páginas internas */
+body.inner-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+                radial-gradient(circle, rgba(13, 22, 48, 0.4) 0%, transparent 70%);
+    z-index: -1;
+    animation: luxuryFloat 25s infinite linear;
+    pointer-events: none;
+}
+
+@keyframes luxuryFloat {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-10%, -10%) rotate(180deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+/* --- LOGO Y TÍTULOS IDÉNTICOS --- */
+.logo, h1, h2, h3, .section-title {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 3px;
+}
+
+/* --- DETALLES EN DORADO SENSUAL --- */
+.text-gold {
+    color: #d4af37;
+    font-weight: bold;
+    text-shadow: 0px 0px 12px rgba(212, 175, 55, 0.6);
+    background: linear-gradient(90deg, #ffe596, #d4af37, #aa8522);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.btn-gold {
+    background: linear-gradient(90deg, #aa8522 0%, #d4af37 50%, #aa8522 100%);
+    background-size: 200% auto;
+    color: #02040a;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 0px; /* Bordes rectos para mayor elegancia */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.btn-gold:hover {
+    background-position: right center;
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 25px rgba(212, 175, 55, 0.5);
+    letter-spacing: 3px;
+}
+
+/* --- NAVEGACIÓN COMPACTA Y DIFUMINADA --- */
+header {
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    background-color: rgba(2, 4, 10, 0.75);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.logo:hover {
+    opacity: 0.9;
+}
+
+nav a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: #d4af37;
+    transition: all 0.4s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after, nav a.active::after {
+    width: 100%;
+}
+
+nav a:hover, nav a.active {
+    color: #d4af37;
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* --- HERO (HOME) --- */
+.hero {
+    text-align: center;
+    padding: 14px 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 1px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- SECCIONES Y TARJETAS DINÁMICAS --- */
+.section-title {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.grid-models {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Tarjetas con zoom sutil e iluminación premium */
+.card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.00) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    box-shadow: 0px 15px 35px rgba(212, 175, 55, 0.15);
+}
+
+.card-img-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img, .card-img-placeholder {
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.card:hover .card-img, .card:hover .card-img-placeholder {
+    transform: scale(1.07);
+}
+
+.card-info {
+    padding: 25px;
+    background: rgba(2, 4, 10, 0.85);
+    position: relative;
+    z-index: 2;
+}
+
+.card-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.card-info p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* --- FORMULARIOS PREMIUM --- */
+.section-olympic {
+    background: linear-gradient(135deg, rgba(10, 17, 40, 0.6) 0%, rgba(2, 4, 10, 0.9) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 50px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    max-width: 700px;
+    margin: 40px auto;
+    position: relative;
+}
+
+/* Glow en las esquinas del formulario para la vibra sensual/nocturna */
+.section-olympic::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: -1px; right: -1px; bottom: -1px;
+    border-radius: inherit;
+    background: linear-gradient(45deg, transparent, rgba(212,175,55,0.3), transparent);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(212, 175, 55, 0.8);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(2, 4, 10, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #d4af37;
+    background-color: rgba(13, 22, 48, 0.8);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 80px;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    background: rgba(2, 4, 10, 0.9);
+}
+
+footer p {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
